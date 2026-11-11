@@ -1,9 +1,6 @@
 __history/
 __recovery/
-Win32/
-Win64/
 *.dcu
-*.exe
 *.local
 *.identcode
 *.dsk
