@@ -38,6 +38,7 @@ type
     CheckBoxClienteAtivo: TCheckBox;
     CbxUF: TComboBox;
     LabelUf: TLabel;
+    BtnVerClientes: TButton;
     procedure FormShow(Sender: TObject);
     procedure BtnCancelarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);

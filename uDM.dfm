@@ -3,18 +3,33 @@ object DM: TDM
   Height = 480
   Width = 640
   object FDConn: TFDConnection
-    Left = 304
-    Top = 224
+    Left = 128
+    Top = 96
   end
   object FDDriverFB: TFDPhysFBDriverLink
     VendorLib = 'C:\Program Files\Firebird\Firebird_5_0\fbclient.dll'
     OnDriverCreated = DataModuleCreate
-    Left = 320
-    Top = 312
+    Left = 272
+    Top = 96
   end
   object FDWaitCursor: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 456
-    Top = 312
+    Left = 432
+    Top = 96
+  end
+  object QryClientes: TFDQuery
+    Connection = FDConn
+    Left = 128
+    Top = 216
+  end
+  object DsClientes: TDataSource
+    DataSet = QryClientes
+    Left = 272
+    Top = 216
+  end
+  object QryCadastro: TFDQuery
+    Connection = FDConn
+    Left = 408
+    Top = 224
   end
 end

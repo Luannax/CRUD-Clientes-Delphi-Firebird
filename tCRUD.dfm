@@ -396,6 +396,14 @@ object FrmCadastroCliente: TFrmCadastroCliente
       Caption = 'Cliente Ativo'
       TabOrder = 3
     end
+    object BtnVerClientes: TButton
+      Left = 920
+      Top = 456
+      Width = 104
+      Height = 26
+      Caption = 'Ver Clientes'
+      TabOrder = 4
+    end
   end
   object EditEmail: TEdit
     Left = 72
