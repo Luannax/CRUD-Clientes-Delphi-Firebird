@@ -1,0 +1,20 @@
+object DM: TDM
+  OnCreate = DataModuleCreate
+  Height = 480
+  Width = 640
+  object FDConn: TFDConnection
+    Left = 304
+    Top = 224
+  end
+  object FDDriverFB: TFDPhysFBDriverLink
+    VendorLib = 'C:\Program Files\Firebird\Firebird_5_0\fbclient.dll'
+    OnDriverCreated = DataModuleCreate
+    Left = 320
+    Top = 312
+  end
+  object FDWaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 456
+    Top = 312
+  end
+end

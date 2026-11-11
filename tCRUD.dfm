@@ -1,4 +1,4 @@
-object Form1: TForm1
+object FrmCadastroCliente: TFrmCadastroCliente
   Left = 0
   Top = 0
   Caption = 'Cadastro de Cliente'
@@ -10,33 +10,8 @@ object Form1: TForm1
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnShow = FormShow
   TextHeight = 15
-  object Label2: TLabel
-    Left = 72
-    Top = 213
-    Width = 56
-    Height = 21
-    Caption = 'Nome *'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Segoe UI Semibold'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
-  object Label3: TLabel
-    Left = 440
-    Top = 189
-    Width = 56
-    Height = 21
-    Caption = 'Nome *'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Segoe UI Semibold'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -61,17 +36,13 @@ object Form1: TForm1
     Height = 558
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 384
-    ExplicitTop = 168
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Panel3: TPanel
       Left = 40
       Top = 16
       Width = 985
       Height = 201
       TabOrder = 0
-      object Label1: TLabel
+      object LabelNome: TLabel
         Left = 32
         Top = 58
         Width = 56
@@ -84,7 +55,7 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label4: TLabel
+      object LabelEmail: TLabel
         Left = 32
         Top = 126
         Width = 44
@@ -97,7 +68,7 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label5: TLabel
+      object LabelCpfCnpj: TLabel
         Left = 680
         Top = 58
         Width = 70
@@ -110,7 +81,7 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label6: TLabel
+      object LabelTelefone: TLabel
         Left = 680
         Top = 126
         Width = 63
@@ -138,11 +109,8 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 208
-        ExplicitTop = 72
-        ExplicitWidth = 185
       end
-      object Edit1: TEdit
+      object EditNome: TEdit
         Left = 32
         Top = 85
         Width = 609
@@ -156,7 +124,7 @@ object Form1: TForm1
         TabOrder = 1
         TextHint = 'Digite o nome do cliente'
       end
-      object Edit4: TEdit
+      object EditCpfCnpj: TEdit
         Left = 680
         Top = 85
         Width = 281
@@ -177,7 +145,7 @@ object Form1: TForm1
       Width = 985
       Height = 201
       TabOrder = 1
-      object Label7: TLabel
+      object LabelCep: TLabel
         Left = 32
         Top = 58
         Width = 27
@@ -190,7 +158,7 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label8: TLabel
+      object LabelEndereco: TLabel
         Left = 279
         Top = 58
         Width = 69
@@ -203,7 +171,7 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label9: TLabel
+      object LabelBairro: TLabel
         Left = 32
         Top = 122
         Width = 44
@@ -216,7 +184,7 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label10: TLabel
+      object LabelCidade: TLabel
         Left = 424
         Top = 120
         Width = 51
@@ -229,12 +197,25 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label11: TLabel
+      object LabelNumero: TLabel
         Left = 808
         Top = 58
         Width = 60
         Height = 21
         Caption = 'N'#250'mero'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LabelUf: TLabel
+        Left = 832
+        Top = 125
+        Width = 19
+        Height = 21
+        Caption = 'UF'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -16
@@ -257,10 +238,8 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 2
-        ExplicitTop = 9
       end
-      object Edit5: TEdit
+      object EditCep: TEdit
         Left = 32
         Top = 85
         Width = 209
@@ -274,7 +253,7 @@ object Form1: TForm1
         TabOrder = 1
         TextHint = '00000-000'
       end
-      object Edit6: TEdit
+      object EditBairro: TEdit
         Left = 32
         Top = 149
         Width = 377
@@ -288,7 +267,7 @@ object Form1: TForm1
         TabOrder = 2
         TextHint = 'Bairro x'
       end
-      object Edit7: TEdit
+      object EditEndereco: TEdit
         Left = 279
         Top = 85
         Width = 482
@@ -302,7 +281,7 @@ object Form1: TForm1
         TabOrder = 3
         TextHint = 'Rua, Condominio ...'
       end
-      object Edit8: TEdit
+      object EditNumero: TEdit
         Left = 808
         Top = 85
         Width = 159
@@ -316,9 +295,9 @@ object Form1: TForm1
         TabOrder = 4
         TextHint = 'N'#186' 00'
       end
-      object Edit9: TEdit
+      object EditCidade: TEdit
         Left = 424
-        Top = 149
+        Top = 147
         Width = 393
         Height = 29
         Font.Charset = DEFAULT_CHARSET
@@ -330,6 +309,43 @@ object Form1: TForm1
         TabOrder = 5
         TextHint = 'Cidade x'
       end
+      object CbxUF: TComboBox
+        Left = 832
+        Top = 152
+        Width = 136
+        Height = 23
+        Style = csDropDownList
+        TabOrder = 6
+        TextHint = 'UF'
+        Items.Strings = (
+          'AC'
+          'AL'
+          'AP'
+          'AM'
+          'BA'
+          'CE'
+          'DF'
+          'ES'
+          'GO'
+          'MA'
+          'MT'
+          'MS'
+          'MG'
+          'PA'
+          'PB'
+          'PR'
+          'PE'
+          'PI'
+          'RJ'
+          'RN'
+          'RS'
+          'RO'
+          'RR'
+          'SC'
+          'SP'
+          'SE'
+          'TO')
+      end
     end
     object footer: TPanel
       Left = 1
@@ -338,6 +354,7 @@ object Form1: TForm1
       Height = 53
       Align = alBottom
       TabOrder = 2
+      ExplicitLeft = 0
       object BtnSalvar: TButton
         Left = 998
         Top = 1
@@ -352,9 +369,7 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 952
-        ExplicitTop = 16
-        ExplicitHeight = 25
+        OnClick = BtnSalvarClick
       end
       object BtnCancelar: TButton
         Left = 1
@@ -370,10 +385,10 @@ object Form1: TForm1
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 883
+        OnClick = BtnCancelarClick
       end
     end
-    object CheckBox1: TCheckBox
+    object CheckBoxClienteAtivo: TCheckBox
       Left = 41
       Top = 456
       Width = 97
@@ -382,7 +397,7 @@ object Form1: TForm1
       TabOrder = 3
     end
   end
-  object Edit2: TEdit
+  object EditEmail: TEdit
     Left = 72
     Top = 234
     Width = 609
@@ -396,7 +411,7 @@ object Form1: TForm1
     TabOrder = 2
     TextHint = 'Digite o email do cliente'
   end
-  object Edit3: TEdit
+  object EditTelefone: TEdit
     Left = 720
     Top = 234
     Width = 287
