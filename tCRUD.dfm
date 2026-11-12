@@ -12,7 +12,7 @@ object FrmCadastroCliente: TFrmCadastroCliente
   Font.Style = []
   OnShow = FormShow
   TextHeight = 15
-  object Panel1: TPanel
+  object Titulo: TPanel
     Left = 0
     Top = 0
     Width = 1076
@@ -354,7 +354,6 @@ object FrmCadastroCliente: TFrmCadastroCliente
       Height = 53
       Align = alBottom
       TabOrder = 2
-      ExplicitLeft = 0
       object BtnSalvar: TButton
         Left = 998
         Top = 1
@@ -403,6 +402,7 @@ object FrmCadastroCliente: TFrmCadastroCliente
       Height = 26
       Caption = 'Ver Clientes'
       TabOrder = 4
+      OnClick = BtnVerClientesClick
     end
   end
   object EditEmail: TEdit

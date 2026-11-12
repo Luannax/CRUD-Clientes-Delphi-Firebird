@@ -2,13 +2,16 @@ program CRUD;
 
 uses
   Vcl.Forms,
-  tCRUD in 'tCRUD.pas' {Form1};
+  tCRUD in 'tCRUD.pas' {FrmCadastroCliente},
+  uDM in 'uDM.pas' {DM: TDataModule},
+  uListaClientes in 'uListaClientes.pas' {FrmListaClientes};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFrmCadastroCliente, FrmCadastroCliente);
   Application.Run;
 end.
